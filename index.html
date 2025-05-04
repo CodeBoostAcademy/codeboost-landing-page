@@ -8,6 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
+    .course-card {
+      transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .course-card:hover {
+      transform: scale(1.03);
+      background-color: #2d3748;
+      border-color: #90cdf4;
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -32,6 +40,11 @@
     </div>
   </nav>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919052961609" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-6 h-6">
+  </a>
+
   <!-- Free Demo Section -->
   <section id="demo" class="bg-blue-1200 text-white py-16">
     <div class="max-w-5xl mx-auto text-center px-4">
@@ -43,39 +56,100 @@
   <!-- Courses Section -->
   <section id="courses" class="max-w-7xl mx-auto py-20 px-6">
     <h2 class="text-4xl font-bold text-center mb-16 text-green-400">Explore Our Courses</h2>
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
       <!-- Python Course -->
-      <div class="bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg hover:shadow-2xl transition">
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
         <div class="flex items-center mb-5">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="w-12 h-12 mr-4">
-          <h3 class="text-2xl font-semibold">Python Programming</h3>
+          <h3 class="text-2xl font-semibold mb-4">Python Programming</h3>
         </div>
         <ul class="list-disc list-inside text-sm space-y-2 mb-4">
-          <li>Basics, variables, loops</li>
-          <li>Functions, lists, dictionaries</li>
-          <li>File handling</li>
-          <li>Mini project & certificate</li>
+          <li>Syntax and Basics</li>
+          <li>Data Structures</li>
+          <li>Functions and Modules</li>
+          <li>Project Based Learning</li>
         </ul>
-        <p class="text-sm font-medium text-green-300">Duration: 4 Weeks | Mode: Online | Beginner Friendly</p>
+        <p class="text-sm font-medium text-green-300">Duration: 4 Weeks</p>
       </div>
+
       <!-- Java Course -->
-      <div class="bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg hover:shadow-2xl transition">
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
         <div class="flex items-center mb-5">
           <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" class="w-12 h-12 mr-4">
-          <h3 class="text-2xl font-semibold">Java Programming</h3>
+          <h3 class="text-2xl font-semibold mb-4">Java Programming</h3>
         </div>
         <ul class="list-disc list-inside text-sm space-y-2 mb-4">
-          <li>Java syntax & OOP concepts</li>
-          <li>Control structures, methods</li>
-          <li>File I/O & final project</li>
-          <li>Certificate of completion</li>
+          <li>OOP Concepts</li>
+          <li>Collections Framework</li>
+          <li>Exception Handling</li>
+          <li>Real-world Projects</li>
         </ul>
-        <p class="text-sm font-medium text-green-300">Duration: 5 Weeks | Mode: Online | Job-Oriented</p>
+        <p class="text-sm font-medium text-green-300">Duration: 4 Weeks</p>
+      </div>
+
+      <!-- GIT Crash Course -->
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
+        <div class="flex items-center mb-5">
+          <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="GIT Logo" class="w-12 h-12 mr-4">
+          <h3 class="text-2xl font-semibold">GIT Crash Course</h3>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-2 mb-4">
+          <li>Version control fundamentals</li>
+          <li>Branching, merging</li>
+          <li>Remote repositories</li>
+          <li>Hands-on practice & certificate</li>
+        </ul>
+        <p class="text-sm font-medium text-green-300">Duration: 1 Week | Mode: Online | Beginner Friendly</p>
+      </div>
+
+      <!-- Docker Course -->
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
+        <div class="flex items-center mb-5">
+          <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo" class="w-12 h-12 mr-4">
+          <h3 class="text-2xl font-semibold">Docker</h3>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-2 mb-4">
+          <li>Containers vs VMs</li>
+          <li>Dockerfiles & images</li>
+          <li>Volumes & networks</li>
+          <li>Deploy real apps</li>
+        </ul>
+        <p class="text-sm font-medium text-green-300">Duration: 2 Weeks | Mode: Online | Practical Focus</p>
+      </div>
+
+      <!-- C Course -->
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
+        <div class="flex items-center mb-5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Logo" class="w-12 h-12 mr-4">
+          <h3 class="text-2xl font-semibold">C Programming</h3>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-2 mb-4">
+          <li>Syntax, control structures</li>
+          <li>Arrays, functions</li>
+          <li>Pointers & memory</li>
+          <li>Mini project</li>
+        </ul>
+        <p class="text-sm font-medium text-green-300">Duration: 5 Weeks | Mode: Online | Fundamental CS Skills</p>
+      </div>
+
+      <!-- C++ Course -->
+      <div class="course-card bg-gray-800 rounded-xl p-8 border border-green-600 shadow-lg transition">
+        <div class="flex items-center mb-5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C++ Logo" class="w-12 h-12 mr-4">
+          <h3 class="text-2xl font-semibold">C++ Programming</h3>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-2 mb-4">
+          <li>OOP principles</li>
+          <li>Classes & inheritance</li>
+          <li>Polymorphism & abstraction</li>
+          <li>Project & certification</li>
+        </ul>
+        <p class="text-sm font-medium text-green-300">Duration: 5 Weeks | Mode: Online | Object-Oriented Focus</p>
       </div>
     </div>
   </section>
 
-  <!-- Registration Section with external Google Form -->
+  <!-- Registration Section -->
   <section id="registration" class="bg-gray-800 py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-white mb-8">Register for a Course</h2>
